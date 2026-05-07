@@ -3,101 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-HAZEL | Coming Soon</title>
+    <title>Coming Soon - x-hazel</title>
     <style>
-        /* Design basierend auf dem X-HAZEL Logo */
         :root {
-            --bg-color: #0a0a0a; /* Tiefschwarz wie der Logo-Hintergrund */
-            --text-color: #ffffff;
-            --accent-orange: #ff8c00; /* Das markante Orange aus dem Logo */
-            --font-main: 'Impact', 'Arial Black', sans-serif; /* Kräftige Schrift passend zum Logo */
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-color: #E1306C;
+            --secondary-text: #666666;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: var(--bg-color);
-            /* Optional: Ein leichter radialer Verlauf für mehr Tiefe */
-            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
             color: var(--text-color);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            overflow: hidden;
+            font-family: var(--font-main);
         }
 
         .container {
             text-align: center;
-            padding: 40px;
+            padding: 40px 20px;
             animation: fadeIn 1.2s ease-out;
-        }
-
-        /* Das Logo-Image */
-        .logo {
-            max-width: 300px; /* Etwas größer für mehr Wirkung */
-            width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.3)); /* Sanfter Glow in Orange */
+            max-width: 400px;
         }
 
         h1 {
-            font-family: var(--font-main);
-            font-size: 2.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 6px;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 0 0 40px 0;
-            color: var(--text-color);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+            color: var(--secondary-text);
         }
 
-        /* "Coming Soon" mit dem Orange-Akzent */
-        .highlight {
-            color: var(--accent-orange);
+        .logo {
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 35px;
+        }
+
+        .info-box {
+            margin-bottom: 30px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .origin {
+            font-size: 0.9rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary-text);
+        }
+
+        .email-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #ddd;
+            transition: all 0.3s;
+            padding-bottom: 2px;
+        }
+
+        .email-link:hover {
+            border-bottom-color: var(--text-color);
+            opacity: 0.7;
         }
 
         .social-link {
             display: inline-block;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            text-decoration: none;
+            margin-top: 45px;
+            transition: transform 0.3s ease;
             color: var(--text-color);
-            opacity: 0.8;
         }
 
         .social-link:hover {
-            transform: scale(1.2) rotate(5deg);
-            color: var(--accent-orange);
-            opacity: 1;
+            transform: scale(1.15);
+            color: var(--accent-color);
         }
 
         .instagram-icon {
-            width: 45px;
-            height: 45px;
+            width: 32px;
+            height: 32px;
             fill: currentColor;
         }
 
-        /* Einblende-Animation */
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Mobile Optimierung */
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; letter-spacing: 2px; }
-            .logo { max-width: 220px; }
+            h1 { font-size: 0.9rem; letter-spacing: 4px; }
+            .logo { max-width: 180px; }
+            .product-title { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="IMG_7934.jpeg" alt="X-HAZEL Logo" class="logo">
+        <h1>Coming Soon</h1>
+
+        <img src="logo.png" alt="x-hazel Logo" class="logo">
         
-        <h1>Coming <span class="highlight">Soon</span></h1>
+        <div class="info-box">
+            <span class="product-title">shisha hazelnut charcoal</span>
+            <span class="origin">made in turkey</span>
+        </div>
+
+        <a href="mailto:Sales@x-hazel.com" class="email-link">Sales@x-hazel.com</a>
+
+        <br>
 
         <a href="https://www.instagram.com/xhazelcoal" target="_blank" class="social-link" aria-label="Instagram">
             <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
